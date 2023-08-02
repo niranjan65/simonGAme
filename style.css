@@ -32,6 +32,10 @@ body{
     background-color: green;
 }
 
+.start-btn{
+    padding: 20px;
+}
+
 @media screen and (max-width: 600px) {
     .btn{
         height: 120px;

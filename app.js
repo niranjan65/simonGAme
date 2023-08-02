@@ -3,11 +3,12 @@ let gameSeq = [];
 let btnColors = ["yellow", "purple", "red", "green"];
 let h2 = document.querySelector("h2");
 let btn = document.querySelector("button");
+let startBtn = document.querySelector(".start-btn");
 
 let level = 0;
 let started = false;
 
-document.addEventListener("click", function(){
+startBtn.addEventListener("click", function(){
     if(started == false){
         console.log("Game is started");
         started = true;
@@ -51,7 +52,7 @@ function checkAns(idx){
         setTimeout(levelup, 1000)
        }
     } else {
-        h2.innerHTML = `Game over! Your score was <b>${level}</b> <br> Please press any key to restart the game`;
+        h2.innerHTML = `Game over! Your score was <b>${level}</b> <br> Please press start to restart the game`;
         document.querySelector("body").style.backgroundColor = "red"
         setTimeout(function () {
             document.querySelector("body").style.backgroundColor = "white"
